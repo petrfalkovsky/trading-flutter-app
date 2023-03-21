@@ -70,10 +70,10 @@ class TabBarGeneralScreen extends StatelessWidget {
                 child: TabBar(
                   unselectedLabelColor: AppConfig.disactiveText,
                   labelColor: AppConfig.activeText,
-                  indicator: BoxDecoration(
-                    color: AppConfig.blackLight,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
+                  // indicator: BoxDecoration(
+                  //   color: AppConfig.blackLight,
+                  //   borderRadius: BorderRadius.circular(5),
+                  // ),
                   labelStyle: const TextStyle(
                     fontSize: AppConfig.fontSize14,
                   ),
