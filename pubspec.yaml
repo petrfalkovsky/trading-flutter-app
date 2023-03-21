@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  provider: ^6.0.1
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +22,10 @@ flutter:
     - family: Gothic A1
       fonts:
         - asset: assets/fonts/GothicA1-Regular.ttf
+
+  assets:
+    - assets/icons/
+    - assets/images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

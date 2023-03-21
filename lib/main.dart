@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'ui/screens/trade_pair_general.dart';
 import 'ui/shared/configs/theme_config.dart';
+import 'ui/widgets/tab_bar.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
@@ -21,7 +21,10 @@ class MyApp extends StatelessWidget {
       color: AppConfig.blacDark,
       theme: ThemeData(fontFamily: AppConfig.fontFamilyGothic),
       debugShowCheckedModeBanner: false,
-      home: const TradePairGeneralScreen(),
+      home: const Scaffold(
+        backgroundColor: AppConfig.blacDark,
+        body: TabBarWidget(),
+      ),
     );
   }
 }

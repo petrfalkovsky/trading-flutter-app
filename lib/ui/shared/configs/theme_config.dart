@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppConfig {
   ////*------------------Цвета-----------------------------*///
   ///Базовые
+  static const Color black = Color.fromARGB(255, 0, 0, 0);
   static const Color blacDark = Color(0xFF212630);
   static const Color blackLight = Color(0xFF333A47);
 
@@ -22,5 +23,7 @@ class AppConfig {
   ///Шрифт
   static const String fontFamilyGothic = "Gothic A1";
 
-  // Трекер
+  // Font Size
+
+  static const double fontSize14 = 14;
 }
