@@ -23,5 +23,7 @@ class AppConfig {
   ///Шрифт
   static const String fontFamilyGothic = "Gothic A1";
 
-  // Трекер
+  // Font Size
+
+  static const double fontSize14 = 14;
 }

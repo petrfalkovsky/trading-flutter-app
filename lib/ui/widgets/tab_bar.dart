@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trading_app_terentev/ui/shared/configs/theme_config.dart';
 
-import '../screens/trade_pair/charts_screen.dart';
+import '../screens/trade_pair/chart_screen/charts_screen.dart';
 import '../screens/trade_pair/trade_screen.dart';
 
 class TabBarWidget extends StatefulWidget {
@@ -37,54 +37,70 @@ class _TabBarWidgetState extends State<TabBarWidget>
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SizedBox(
             height: MediaQuery.of(context).size.height,
-            child: Column(
-              children: [
-                const SizedBox(height: 20),
-                Container(
-                  width: MediaQuery.of(context).size.height,
-                  decoration: BoxDecoration(
-                      color: AppConfig.blacDark,
-                      borderRadius: BorderRadius.circular(5)),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(5),
-                        child: TabBar(
-                          unselectedLabelColor: AppConfig.disactiveText,
-                          labelColor: AppConfig.activeText,
-                          indicatorWeight: 2,
-                          indicator: BoxDecoration(
-                            color: AppConfig.blackLight,
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          controller: tabController,
-                          tabs: const [
-                            Tab(
-                              text: 'Charts',
-                            ),
-                            Tab(
-                              text: 'Trade',
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: TabBarView(
-                    controller: tabController,
-                    children: const [
-                      Tab1(),
-                      Tab2(),
-                    ],
-                  ),
-                )
-              ],
-            ),
+            child: TabBarGeneralScreen(tabController: tabController),
           ),
         ),
       ),
+    );
+  }
+}
+
+class TabBarGeneralScreen extends StatelessWidget {
+  const TabBarGeneralScreen({
+    super.key,
+    required this.tabController,
+  });
+
+  final TabController tabController;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const SizedBox(height: 20),
+        Container(
+          width: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+              color: AppConfig.blacDark,
+              borderRadius: BorderRadius.circular(5)),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 30,
+                child: TabBar(
+                  unselectedLabelColor: AppConfig.disactiveText,
+                  labelColor: AppConfig.activeText,
+                  indicator: BoxDecoration(
+                    color: AppConfig.blackLight,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  labelStyle: const TextStyle(
+                    fontSize: AppConfig.fontSize14,
+                  ),
+                  controller: tabController,
+                  tabs: const [
+                    Tab(
+                      text: 'Charts',
+                    ),
+                    Tab(
+                      text: 'Trade',
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: TabBarView(
+            controller: tabController,
+            children: const [
+              Tab1(),
+              Tab2(),
+            ],
+          ),
+        )
+      ],
     );
   }
 }

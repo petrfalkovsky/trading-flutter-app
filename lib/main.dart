@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
         backgroundColor: AppConfig.blacDark,
-        body: GeneralScreen(),
+        body: TabBarWidget(),
       ),
     );
   }
