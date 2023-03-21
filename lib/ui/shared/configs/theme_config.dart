@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppConfig {
   ////*------------------Цвета-----------------------------*///
   ///Базовые
+  static const Color black = Color.fromARGB(255, 0, 0, 0);
   static const Color blacDark = Color(0xFF212630);
   static const Color blackLight = Color(0xFF333A47);
 
